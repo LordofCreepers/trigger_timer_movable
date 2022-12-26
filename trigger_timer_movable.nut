@@ -209,8 +209,8 @@ class Door extends MovableWrapper
 	function GetDistance()
 	{
 		return
-			fabs( ( NetProps.GetPropVector( linked_ent, "m_vecPosition2" ) -
-			NetProps.GetPropVector( linked_ent, "m_vecPosition1" ) ).Length() )
+			fabs( ( NetProps.GetPropVector( pLinkedEntity, "m_vecPosition2" ) -
+			NetProps.GetPropVector( pLinkedEntity, "m_vecPosition1" ) ).Length() )
 	}
 
 	// SetSpeed( float speed ) -> null
@@ -445,6 +445,7 @@ function Initialize( scope ) {
 		integer id - the index of EntityGroup to be checked
 		table { string : any } - the table which keys represent allowed entity classnames
 	*/
+
 	local assert_entity = function( ent, id, types ) {
 		local scope = ent.GetScriptScope()
 		if (
