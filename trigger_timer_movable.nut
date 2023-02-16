@@ -162,7 +162,7 @@ class Movelinear extends MovableWrapper
 	// override
 	function GetDistance()
 	{
-		return NetProp.GetPropFloat( pLinkedEntity, "m_flMoveDistance" )
+		return NetProps.GetPropFloat( pLinkedEntity, "m_flMoveDistance" )
 	}
 
 	// SetSpeed( float speed ) -> null
