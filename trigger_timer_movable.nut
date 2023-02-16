@@ -208,9 +208,8 @@ class Door extends MovableWrapper
 	// override
 	function GetDistance()
 	{
-		return
-			fabs( ( NetProps.GetPropVector( pLinkedEntity, "m_vecPosition2" ) -
-			NetProps.GetPropVector( pLinkedEntity, "m_vecPosition1" ) ).Length() )
+		return ( NetProps.GetPropVector( pLinkedEntity, "m_vecPosition2" ) -
+			NetProps.GetPropVector( pLinkedEntity, "m_vecPosition1" ) ).Length()
 	}
 
 	// SetSpeed( float speed ) -> null
